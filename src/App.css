@@ -26,6 +26,7 @@ h1,h2,h3,p { margin-top:0; }
 h1,h2 { font-family:var(--display); font-weight:500; letter-spacing:-.06em; line-height:.99; }
 h1 { max-width:730px; margin-bottom:30px; font-size:clamp(52px,7vw,96px); }
 h1 em,h2 em { color:var(--accent); font-style:normal; }
+.hero-subtitle { color:var(--accent); font:500 14px var(--mono); letter-spacing:.08em; margin-bottom:14px; }
 .hero-intro { max-width:510px; color:var(--muted); font-size:16px; line-height:1.7; }
 .hero-actions,.contact-actions { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:32px; }
 .button { min-height:43px; padding:0 17px; display:inline-flex; align-items:center; justify-content:center; gap:10px; color:#11170d; background:var(--accent); border:1px solid var(--accent); font-size:12px; font-weight:700; letter-spacing:.02em; transition:transform .2s,box-shadow .2s,background .2s; }
@@ -53,8 +54,41 @@ h1 em,h2 em { color:var(--accent); font-style:normal; }
 .journey-section { display:grid; grid-template-columns:1fr 1.15fr; gap:90px; }.timeline { position:relative; display:grid; grid-template-columns:repeat(7,1fr); padding-top:27px; }.timeline::before { content:''; position:absolute; top:43px; left:0; right:0; height:1px; background:var(--line); }.timeline-step { position:relative; display:flex; flex-direction:column; gap:18px; color:var(--muted); font-size:12px; line-height:1.4; padding-right:12px; }.timeline-step:not(:first-child) { padding-left:12px; }.timeline-dot { width:34px; height:34px; display:grid; place-items:center; background:var(--bg); border:1px solid var(--line); color:var(--accent); font:10px var(--mono); z-index:1; }.timeline-step:last-child .timeline-dot { background:var(--accent); color:#17200f; border-color:var(--accent); }
 .github-section { border-top:1px solid var(--line); background:var(--surface-2); }.github-card { min-height:340px; padding-top:75px; padding-bottom:75px; display:grid; grid-template-columns:1fr 1fr; gap:90px; align-items:center; }.github-copy { display:flex; flex-direction:column; align-items:flex-start; }.github-copy svg { color:var(--accent); margin-bottom:24px; }.github-copy p { max-width:320px; color:var(--muted); line-height:1.7; }.github-copy .button { margin-top:14px; }.github-handle { color:var(--muted); margin-top:20px; }
 .github-glyph { color:var(--accent); font:600 28px var(--display); letter-spacing:-.08em; margin-bottom:24px; }
-.contact-section { padding-top:150px; padding-bottom:155px; }.contact-section h2 { font-size:clamp(58px,8vw,110px); max-width:850px; }.contact-section > p { margin-top:28px; color:var(--muted); }.contact-actions { margin-top:30px; }.placeholder-note { color:var(--muted); display:block; margin-top:22px; }
+.contact-section { padding-top:150px; padding-bottom:155px; }.contact-section h2 { font-size:clamp(58px,8vw,110px); max-width:850px; }.contact-section > p { margin-top:28px; color:var(--muted); }.contact-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:42px; }.contact-card { display:flex; flex-direction:column; gap:10px; padding:22px; border:1px solid var(--line); background:var(--surface); color:var(--ink); transition:border-color .2s,background .2s,transform .2s; }.contact-card:hover { border-color:var(--accent); background:var(--accent-soft); transform:translateY(-3px); }.contact-card svg { color:var(--accent); }.contact-card-label { color:var(--accent); font-size:10px; letter-spacing:.12em; }.contact-card-value { color:var(--muted); font-size:13px; word-break:break-all; }
 .site-footer { border-top:1px solid var(--line); }.footer-inner { min-height:105px; display:flex; align-items:center; gap:35px; }.footer-mark,.footer-copy { color:var(--muted); }.footer-copy { margin-left:auto; font-size:11px; }.footer-links { display:flex; gap:18px; font-size:11px; }
 @media (max-width:900px) { .hero,.about-section,.skills-section,.research-section,.journey-section { grid-template-columns:1fr; gap:55px; }.hero { padding-top:90px; }.system-visual { min-height:440px; }.about-content { grid-template-columns:1fr 250px; }.timeline { grid-template-columns:1fr; gap:22px; padding-left:50px; }.timeline::before { top:0; bottom:0; left:17px; width:1px; height:auto; }.timeline-step,.timeline-step:not(:first-child) { padding:0; flex-direction:row; align-items:center; }.timeline-dot { flex-shrink:0; }.github-card { gap:50px; } }
 @media (max-width:640px) { .section-frame,.nav-shell { width:calc(100% - 36px); }.nav-shell { min-height:66px; }.nav-links { position:absolute; top:67px; left:0; right:0; display:none; flex-direction:column; align-items:stretch; gap:0; padding:10px 18px 18px; background:var(--surface); border-bottom:1px solid var(--line); }.nav-links.is-open { display:flex; }.nav-links a { padding:14px 0; border-bottom:1px solid var(--line); }.menu-button { display:grid; }.hero { min-height:auto; padding:85px 0 100px; }.hero h1 { font-size:56px; }.hero-meta { flex-direction:column; gap:10px; margin-top:55px; }.system-visual { min-height:360px; }.node { width:52px;height:52px;font-size:9px; }.node-core { width:72px;height:72px; }.about-section,.skills-section,.research-section,.journey-section { padding-top:100px; padding-bottom:100px; }.about-content { grid-template-columns:1fr; }.builder-card { min-height:240px; }.projects-section { padding:100px 0; }.projects-heading { display:block; margin-bottom:45px; }.projects-heading p { margin-top:25px; }.project-card { padding:20px; }.project-top { margin-bottom:38px; }.project-details { grid-template-columns:1fr; gap:25px; margin:35px 0; }.project-footer { flex-direction:column; align-items:stretch; }.project-links { justify-content:stretch; }.project-links .button { flex:1; }.research-topics { grid-template-columns:1fr; }.topic:nth-last-child(-n+2) { border-bottom:0; }.topic:last-child { border-bottom:1px solid var(--line); }.github-card { grid-template-columns:1fr; padding-top:70px; padding-bottom:70px; }.footer-inner { flex-wrap:wrap; gap:16px; padding:25px 0; }.footer-copy { margin-left:0; width:100%; order:3; }.footer-links { margin-left:auto; }.contact-section { padding-top:100px; padding-bottom:110px; }.contact-section h2 { font-size:59px; } }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; } }
+/* ===== Enhancement pass — accessibility, skills, research, journey ===== */
+a:focus-visible,button:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+
+.skill-groups { gap:18px; }
+.skill-group { border:1px solid var(--line); background:var(--surface); padding:26px 24px; transition:border-color .2s,background .2s,transform .2s; }
+.skill-group:hover { border-color:var(--accent); transform:translateY(-2px); }
+.skill-head { display:flex; align-items:center; gap:12px; margin-bottom:9px; }
+.skill-head svg { color:var(--accent); flex-shrink:0; }
+.skill-head h3 { margin:0; }
+.skill-descr { margin:0 0 16px; font-size:12px; line-height:1.55; color:var(--muted); max-width:44ch; }
+
+.tech-note { display:inline-block; padding:8px 11px; border:1px dashed var(--line); color:var(--muted); font-size:11px; }
+.project-areas { margin-top:36px; border-top:1px solid var(--line); padding-top:24px; }
+.project-areas .detail-label { margin-bottom:13px; }
+
+.topic { transition:background .2s,border-color .2s,transform .2s; }
+.topic:hover { background:var(--accent-soft); }
+.topic svg { transition:color .2s,transform .2s; }
+.topic:hover svg { color:var(--accent); transform:translate(2px,-2px); }
+
+.timeline-dot { transition:transform .2s,border-color .2s,background .2s,box-shadow .4s; }
+.timeline-step:hover .timeline-dot { border-color:var(--accent); transform:translateY(-3px); }
+.timeline-step:last-child .timeline-dot { animation:dotPulse 2.6s ease-in-out infinite; }
+@keyframes dotPulse { 0%,100% { box-shadow:0 0 0 0 var(--accent-soft); } 50% { box-shadow:0 0 0 10px transparent; } }
+.timeline-step { animation:rise .45s ease both; }
+.timeline-step:nth-child(1) { animation-delay:.04s; }
+.timeline-step:nth-child(2) { animation-delay:.09s; }
+.timeline-step:nth-child(3) { animation-delay:.14s; }
+.timeline-step:nth-child(4) { animation-delay:.19s; }
+.timeline-step:nth-child(5) { animation-delay:.24s; }
+.timeline-step:nth-child(6) { animation-delay:.29s; }
+.timeline-step:nth-child(7) { animation-delay:.34s; }
+@keyframes rise { from { opacity:0; transform:translateY(7px); } to { opacity:1; transform:translateY(0); } }
